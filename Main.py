@@ -24,13 +24,6 @@ def check_queue(id):
         player = queues[id].pop(0)
         players[id] = player
         player.start()
-
-@client.event 
-async def on_ready():
-    print('Logged in as')
-    print("User name:", client.user.name)
-    print("User id:", client.user.id)
-    print('---------------')
     
 async def audio_player_task():
     while True:
