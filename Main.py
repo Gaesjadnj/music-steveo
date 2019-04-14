@@ -16,7 +16,12 @@ songs = asyncio.Queue()
 play_next_song = asyncio.Event()
 client.remove_command("help")
 
-players = {}
+@client.event
+async def on_ready():
+    await client.change_presence(game=Game(name='music'))
+    print('Ready, Freddy') 
+
+    players = {}
 queues = {}
 
 def check_queue(id):
@@ -143,4 +148,4 @@ async def queue(ctx, *, name):
     await client.say(embed=embed)
 
 client.loop.create_task(audio_player_task())
-client.run('NTU4NTIyNjMzOTk4ODI3NTIw.XKMLtg.YhOcYNW4s10GA516Z_jUzWf89MU')
+client.run(os.environ['BOT_TOKEN']
