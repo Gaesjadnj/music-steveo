@@ -548,4 +548,4 @@ async def thanks(ctx, *, member: discord.Member = None):
                 await client.say(embed=embed)
     except:
         pass
-client.run('NTQ4ODAzNjExNTM1MzQzNjI2.D1KozA.0m0NsR_NekPr9vmEM_MKr5xHxeQ')
+client.run('BOT_TOKEN')
